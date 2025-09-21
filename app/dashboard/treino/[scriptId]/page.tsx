@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { useRouter } from "next/navigation"
 import { useState, useEffect } from "react"
+import { DeleteScriptButton } from "@/components/delete-script-button"
 
 interface Exercise {
   nome: string
@@ -86,7 +87,10 @@ export default function TreinoPage({ params }: { params: Promise<{ scriptId: str
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <div className="mb-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">{script.titulo}</h1>
+            <div className="flex justify-between items-start mb-2">
+              <h1 className="text-3xl font-bold text-gray-900">{script.titulo}</h1>
+              <DeleteScriptButton scriptId={script.id} scriptTitle={script.titulo} />
+            </div>
             <p className="text-gray-600 mb-2">{script.descricao}</p>
             <p className="text-sm text-gray-500">
               Criado em: {new Date(script.created_at).toLocaleDateString("pt-BR")}

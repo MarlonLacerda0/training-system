@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { Plus, Target, Dumbbell, Calendar } from "lucide-react"
+import { DeleteGoalButton } from "@/components/delete-goal-button"
+import { DeleteScriptButton } from "@/components/delete-script-button"
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -125,7 +127,15 @@ export default async function DashboardPage() {
                     <CardTitle className="text-lg">
                       {objetivoLabels[goal.objetivo as keyof typeof objetivoLabels]}
                     </CardTitle>
-                    <Badge variant="secondary">{nivelLabels[goal.nivel_experiencia as keyof typeof nivelLabels]}</Badge>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="secondary">
+                        {nivelLabels[goal.nivel_experiencia as keyof typeof nivelLabels]}
+                      </Badge>
+                      <DeleteGoalButton
+                        goalId={goal.id}
+                        goalTitle={objetivoLabels[goal.objetivo as keyof typeof objetivoLabels]}
+                      />
+                    </div>
                   </div>
                   <CardDescription>
                     {goal.dias_semana} dias/semana • {goal.tempo_disponivel} minutos
@@ -182,7 +192,10 @@ export default async function DashboardPage() {
             {trainingScripts.slice(0, 6).map((script) => (
               <Card key={script.id} className="hover:shadow-md transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-lg">{script.titulo}</CardTitle>
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="text-lg">{script.titulo}</CardTitle>
+                    <DeleteScriptButton scriptId={script.id} scriptTitle={script.titulo} />
+                  </div>
                   <CardDescription>
                     {script.duracao_estimada} min • {new Date(script.created_at).toLocaleDateString("pt-BR")}
                   </CardDescription>

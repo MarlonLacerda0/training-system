@@ -40,7 +40,7 @@ export function Navbar({ userName }: NavbarProps) {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-4">
-            <h1 className="text-xl font-bold text-gray-900">Gerador de Treinos</h1>
+            <h1 className="text-xl font-bold text-gray-900">Move+</h1>
           </div>
 
           <div className="flex items-center space-x-4">

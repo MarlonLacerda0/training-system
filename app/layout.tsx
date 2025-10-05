@@ -7,7 +7,7 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Gerador de Scripts de Treino",
+  title: "Move+",
   description: "Sistema para gerar treinos personalizados baseados em suas metas e equipamentos disponíveis",
   generator: "v0.app",
 }

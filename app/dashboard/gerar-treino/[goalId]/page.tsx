@@ -228,9 +228,9 @@ export default function GerarTreinoPage({ params }: { params: Promise<{ goalId: 
             <Button variant="outline" onClick={() => router.back()} className="flex-1">
               Voltar
             </Button>
-            <Button variant="outline" onClick={handleRegenerateScript} className="flex-1 bg-transparent">
+            {/* <Button variant="outline" onClick={handleRegenerateScript} className="flex-1 bg-transparent">
               Gerar Novo Treino
-            </Button>
+            </Button> */}
             <Button onClick={handleSaveScript} disabled={isSaving} className="flex-1">
               {isSaving ? "Salvando..." : "Salvar Treino"}
             </Button>

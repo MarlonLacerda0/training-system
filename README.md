@@ -50,5 +50,8 @@ O projeto segue uma arquitetura **modular e escalável**, organizada da seguinte
 - **Deploy:**  
   Feito na **Vercel**, que oferece CI/CD integrado com o GitHub e garante alta disponibilidade da aplicação.
 
+---
 
+- **Como Acessar?:**  
+  Para acessar a aplicação é só seguir o link: https://training-system-jade.vercel.app/ 
 

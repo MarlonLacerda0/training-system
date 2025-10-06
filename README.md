@@ -53,5 +53,5 @@ O projeto segue uma arquitetura **modular e escalável**, organizada da seguinte
 ---
 
 - **Como Acessar?:**  
-  Para acessar a aplicação é só seguir o link: https://training-system-jade.vercel.app/ 
+  Para acessar a aplicação é só clicar <a href="https://training-system-jade.vercel.app/" target="_blank">aqui</a> 
 

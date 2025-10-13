@@ -58,7 +58,7 @@ export default function CadastroPage() {
         <div className="flex flex-col gap-6">
           <Card>
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Cadastrar</CardTitle>
+              <CardTitle className="text-2xl">Cadastro</CardTitle>
               <CardDescription>Crie sua conta para gerar treinos personalizados</CardDescription>
             </CardHeader>
             <CardContent>
